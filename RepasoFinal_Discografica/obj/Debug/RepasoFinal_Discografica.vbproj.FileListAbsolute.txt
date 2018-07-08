@@ -1,0 +1,10 @@
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\bin\Debug\RepasoFinal_Discografica.dll
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\bin\Debug\RepasoFinal_Discografica.pdb
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\bin\Debug\RepasoFinal_Discografica.xml
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.vbprojAssemblyReference.cache
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.Resources.resources
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.vbproj.GenerateResource.cache
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.vbproj.CoreCompileInputs.cache
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.dll
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.xml
+C:\Users\Romina\source\repos\RepasoFinal_Discografica\RepasoFinal_Discografica\obj\Debug\RepasoFinal_Discografica.pdb
