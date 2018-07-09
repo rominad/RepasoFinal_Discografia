@@ -18,6 +18,12 @@ Public Class Discografica
     End Property
     'metodo
     Public Function TotalRegalia() As Single Implements Regalias.TotalRegalia
+        'ESTO ESTA BIEN PENSADO?? :
+        'Regalias.TotalRegalias() = en la tienda traemos las descargas de un determinado interprete.
+        '1)llamamos la funcion getDescargaByDiscografica(interprete)
+        'cada Descarga tiene tiene una cancion, fecha y monto. traemos el monto = descarga.monto
+        '2)a ese monto le sumamos el valor de la descarga. monto += monto * valorDescarga
+        '3)a esa sumatoria le multiplicamos el porcentajeDeRegalia.
         Throw New NotImplementedException()
     End Function
     Sub New(id As Integer, nombre As String, porcentajeRegalias As Single)
