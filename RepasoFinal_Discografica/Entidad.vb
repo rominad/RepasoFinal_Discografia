@@ -17,6 +17,12 @@
             Return _nombre
         End Get
         Set(value As String)
+            If value = Nothing Then
+                Throw New ArgumentException("El nombre no debe estar vacio!")
+            End If
+            If value.Length < 3 Then
+                Throw New ArgumentException("El nombre es muy corto!")
+            End If
             _nombre = value
         End Set
     End Property

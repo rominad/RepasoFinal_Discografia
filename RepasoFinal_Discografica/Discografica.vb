@@ -10,10 +10,13 @@ Public Class Discografica
     'propiedad
     Public Property PorcentajeRegalia As Single Implements Regalias.PorcentajeRegalia
         Get
-            Throw New NotImplementedException()
+            Return _porcentajeRegalia
         End Get
         Set(value As Single)
-            Throw New NotImplementedException()
+            If value < 0 Then
+                Throw New ArgumentException("El valor de porcentaje regalias no debe ser negativo!")
+            End If
+            _porcentajeRegalia = value
         End Set
     End Property
     'metodo

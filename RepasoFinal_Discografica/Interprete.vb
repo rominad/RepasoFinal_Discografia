@@ -12,6 +12,9 @@ Public NotInheritable Class Interprete
             Return _porcentajeRegalia
         End Get
         Set(value As Single)
+            If value < 0 Then
+                Throw New ArgumentException("El valor de porcentaje regalias no debe ser negativo!")
+            End If
             _porcentajeRegalia = value
         End Set
     End Property

@@ -7,22 +7,39 @@ Module CancionTest
 
         Dim cancion1 As New Cancion(1, "Chuchua")
 
-        cancion1.addInterpretes(interprete1)
-        cancion1.addInterpretes(interprete2)
-        Cancion1.addInterpretes(interprete3)
-
-        Console.WriteLine("Listado de Interpretes:")
-        For Each interpretes In cancion1.getAllInterpretes()
-            Console.WriteLine("- {0}", interpretes.Nombre)
-        Next
-        cancion1.removeInterpretes(interprete3)
-        Console.WriteLine("Listado de Interpretes con remove:")
-        For Each cantante In Cancion1.getAllInterpretes()
-            Console.WriteLine("- {0}", cantante)
-        Next
-
-        Console.WriteLine(cancion1.ToString())
-        Console.WriteLine()
+        Try
+            cancion1.addInterpretes(interprete1)
+            cancion1.addInterpretes(interprete2)
+            cancion1.addInterpretes(interprete3)
+        Catch ex As Exception
+            Console.WriteLine("Error inesperado!")
+        End Try
+        Try
+            Console.WriteLine("Listado de Interpretes:")
+            For Each interpretes In cancion1.getAllInterpretes()
+                Console.WriteLine("- {0}", interpretes.Nombre)
+            Next
+        Catch ex As Exception
+            Console.WriteLine("Error inesperado!")
+        End Try
+        Try
+            cancion1.removeInterpretes(interprete3)
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+        Try
+            Console.WriteLine("Listado de Interpretes con remove:")
+            For Each cantante In cancion1.getAllInterpretes()
+                Console.WriteLine("- {0}", cantante)
+            Next
+        Catch ex As Exception
+            Console.WriteLine("Error inesperado!")
+        End Try
+        Try
+            Console.WriteLine(cancion1.ToString())
+        Catch ex As Exception
+            Console.WriteLine("Error inesperado!")
+        End Try
         Console.ReadKey()
     End Sub
 End Module

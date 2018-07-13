@@ -15,6 +15,9 @@
             Return _monto
         End Get
         Set(value As Single)
+            If value < 0 Then
+                Throw New ArgumentException("El valor no debe ser menor a cero!")
+            End If
             _monto = value
         End Set
     End Property
