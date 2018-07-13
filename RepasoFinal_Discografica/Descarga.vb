@@ -2,7 +2,7 @@
     Private _fecha As Date
     Private _monto As Single
     Private _cancion As Cancion
-    Private Property Fecha As Date
+    Public Property Fecha As Date
         Get
             Return _fecha
         End Get
@@ -10,7 +10,7 @@
             _fecha = value
         End Set
     End Property
-    Private Property Monto As Single
+    Public Property Monto As Single
         Get
             Return _monto
         End Get
@@ -21,7 +21,7 @@
             _monto = value
         End Set
     End Property
-    Private Property Cancion As Cancion
+    Public Property Cancion As Cancion
         Get
             Return _cancion
         End Get

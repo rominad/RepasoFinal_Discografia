@@ -6,6 +6,7 @@ Public NotInheritable Class Interprete
     Implements Regalias
     'campo
     Private _porcentajeRegalia As Single
+    Private _tienda As Tienda
     'propiedad
     Private Property Regalias_PorcentajeRegalia As Single Implements Regalias.PorcentajeRegalia
         Get
@@ -22,11 +23,15 @@ Public NotInheritable Class Interprete
     Public Function TotalRegalia() As Single Implements Regalias.TotalRegalia
         'ESTO ESTA BIEN PENSADO?? :
         'Regalias.TotalRegalias() = en la tienda traemos las descargas de un determinado interprete.
-        '1)llamamos la funcion getDescargaByInterprete(interprete)
-        'cada Descarga tiene tiene una cancion, fecha y monto. traemos el monto = descarga.monto
-        '2)a ese monto le sumamos el valor de la descarga. monto += monto * valorDescarga
+        '1)llamamos la funcion getDescargaByInterprete(interprete),donde
+        'cada Descarga tiene tiene una cancion, fecha y monto.
+        '2)traemos el monto(descarga.monto) y le multiplicamos el valor de la descarga(tienda.valorDescarga)
         '3)a esa sumatoria le multiplicamos el porcentajeDeRegalia.
-        Throw New NotImplementedException()
+        Dim total As New Single
+        For Each descarga In _tienda.getDescargasByInterprete(Me)
+            total = (descarga.Monto * _tienda.ValorDescarga) * Regalias_PorcentajeRegalia
+        Next
+        Return total
     End Function
     Sub New(id As Integer, nombre As String, porcentajeRegalia As Single)
         MyBase.New(id, nombre)

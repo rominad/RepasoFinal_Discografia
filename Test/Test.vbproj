@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27CA7EE8-CBD7-490D-B721-2D2C2ED11604}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Test.TiendaTest</StartupObject>
+    <StartupObject>Test.DescargaTest</StartupObject>
     <RootNamespace>Test</RootNamespace>
     <AssemblyName>Test</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="CancionTest.vb" />
     <Compile Include="DescargaTest.vb" />
+    <Compile Include="DiscograficaTest.vb" />
     <Compile Include="EntidadTest.vb" />
     <Compile Include="InterpreteTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
