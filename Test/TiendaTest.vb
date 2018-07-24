@@ -7,6 +7,7 @@ Module TiendaTest
         Dim cancion2 As New Cancion(2, "Hey U")
         Dim descarga1 As New Descarga(cancion1, Today, 52150300.0)
         Dim descarga2 As New Descarga(cancion2, Today, 16100200.0)
+        Dim Discografica1 As New Discografica(1, "DiscoMania", 0.2)
         Dim tienda1 As New Tienda
         Try
             cancion1.addInterpretes(interprete1)
@@ -23,24 +24,20 @@ Module TiendaTest
         Try
             Console.WriteLine(vbNewLine & "todas las descargas: ")
             For Each desc In tienda1.getAllDescargas()
-                Console.WriteLine("- ", desc)
+                Console.WriteLine("- {0}", desc)
             Next
         Catch ex As Exception
             Console.WriteLine("Error inesperado!No se pudo mostrar todas las descargas!")
         End Try
-        'Try
-        '    tienda1.getDescargasByDiscografica(interprete1))
-        'Catch ex As Exception
-        '    Console.WriteLine(ex.Message)
-        'End Try
-        'Try
-        '    Console.WriteLine(vbNewLine & "Traigo descargas por interprete en discografica: ")
-        '    For Each descDI In tienda1.getDescargasByDiscografica(interprete1)
-        '        Console.WriteLine("- {0}", descDI)
-        '    Next
-        'Catch ex As Exception
-        '    Console.WriteLine("Error inesperado!no se pudo ver descargas por fechas")
-        'End Try
+
+        Try
+            Console.WriteLine(vbNewLine & "Traigo descargas por discograficas: ")
+            For Each descDI In tienda1.getDescargasByDiscografica(discografica1)
+                Console.WriteLine("- {0}", descDI)
+            Next
+        Catch ex As Exception
+            Console.WriteLine("Error inesperado! NO se pudo ver descargas por discograficas")
+        End Try
         Try
             tienda1.getDescargasByFecha(Today)
         Catch ex As Exception
@@ -52,7 +49,7 @@ Module TiendaTest
                 Console.WriteLine("- {0}", desc)
             Next
         Catch ex As Exception
-            Console.WriteLine("Error inesperado!no se pudo ver descargas por fechas")
+            Console.WriteLine("Error inesperado! NO se pudo ver descargas por fechas")
         End Try
         Try
             tienda1.getDescargasByInterprete(interprete1)

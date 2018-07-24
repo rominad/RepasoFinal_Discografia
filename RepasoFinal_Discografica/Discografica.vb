@@ -30,17 +30,25 @@ Public Class Discografica
         '2)traemos el monto(descarga.monto) y le multiplicamos el valor de la descarga(tienda.valorDescarga)
         '3)a esa sumatoria le multiplicamos el porcentajeDeRegalia.
         Dim total As New Single
+        Console.WriteLine("_getDescargasByInterprete = {0}", _tienda.getDescargasByInterprete(_interprete).Count)
         For Each descarga In _tienda.getDescargasByInterprete(_interprete)
-            total = (descarga.Monto * _tienda.ValorDescarga) * PorcentajeRegalia
+            total += (descarga.Monto * _tienda.ValorDescarga) * PorcentajeRegalia
+            Console.WriteLine("descarga = {0}", descarga)
+            Console.WriteLine("descarga.Monto = {0}", descarga.Monto)
+            Console.WriteLine("_tienda.ValorDescarg = {0}", _tienda.ValorDescarga)
+            Console.WriteLine("PorcentajeRegalia = {0}", PorcentajeRegalia)
+            Console.WriteLine("total = {0}", total)
         Next
         Return total
     End Function
     Sub New(id As Integer, nombre As String, porcentajeRegalias As Single)
         MyBase.New(id, nombre)
         Me.PorcentajeRegalia = porcentajeRegalias
+        _tienda = New Tienda
+        _interprete = New Interprete(id, nombre, PorcentajeRegalia)
     End Sub
     Public Overrides Function ToString() As String
-        Return "Nombre Discografica: " + Nombre
+        Return Nombre
     End Function
 
 End Class

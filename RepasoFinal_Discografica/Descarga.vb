@@ -35,6 +35,6 @@
         Me.Monto = monto
     End Sub
     Public Overrides Function ToString() As String
-        Return "Descarga: " + Cancion.Nombre + " - " + Fecha
+        Return Cancion.Nombre + " - " + Fecha
     End Function
 End Class

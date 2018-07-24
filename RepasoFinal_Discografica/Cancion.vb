@@ -5,7 +5,7 @@
     Private _interprete As Interprete
     Private _discografica As Discografica
     'propiedad
-    Private Property Discografica As Discografica
+    Public Property Discografica As Discografica
         Get
             Return _discografica
         End Get
@@ -29,6 +29,6 @@
         _interpretes = New List(Of Interprete)
     End Sub
     Public Overrides Function ToString() As String
-        Return "Nombre: " + Nombre
+        Return Nombre
     End Function
 End Class
